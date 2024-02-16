@@ -10,8 +10,7 @@
     <!-- static css -->
     <link rel="stylesheet" href="css/style.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.
-    css">
+    
     <!-- font-awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
@@ -59,8 +58,8 @@
               </button>
               <ul class="dropdown-menu">
                 <li><a class="dr dropdown-item" href="/signup_user">As User</a></li>
-                <li><a class="dr dropdown-item" href="{{ url_for('volunteer_signup')}}">As Volunteer</a></li>
-                <li><a class="dr dropdown-item" href="{{ url_for('driver_signup')}}">As Driver</a></li>
+                <li><a class="dr dropdown-item" href="/signup_volunteer">As Volunteer</a></li>
+                <li><a class="dr dropdown-item" href="/signup_driver">As Driver</a></li>
                 
               </ul>
             </div>
@@ -75,9 +74,9 @@
                 </svg>
               </button>
               <ul class="dropdown-menu">
-                <li><a class="dr dropdown-item" href="{{ url_for('user_login')}}">As User</a></li>
-                <li><a class="dr dropdown-item" href="{{ url_for('vol_login')}}">As Volunteer</a></li>
-                <li><a class="dr dropdown-item" href="{{ url_for('driver_login')}}">As Driver</a></li>
+                <li><a class="dr dropdown-item" href="/login_user">As User</a></li>
+                <li><a class="dr dropdown-item" href="/login_vol">As Volunteer</a></li>
+                <li><a class="dr dropdown-item" href="/login_driver">As Driver</a></li>
                 
               </ul>
             </div>
@@ -100,6 +99,8 @@
 
        
         <a href="#services">Our Services</a>
+        <br>
+        <a href="/book_cab">Get Started</a>
       </div>
       
     </section>
@@ -496,7 +497,7 @@
                   <div class="card-body">
                      <small class="card-meta mb-2"></small>
                      <h4 class="card-title mt-0 ">Connect with us on our linkdn handles!</h4>
-                     <img style="padding-top: 50px;" width="100px" src="static/images/link (1).png" alt="">
+                     <img style="padding-top: 50px;" width="100px" src="images/link (1).png" alt="">
                    </div>
                    <div class="card-footer">
                     <div class="media">

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup User</title>
+    <title>Signup Driver</title>
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
@@ -14,16 +14,16 @@
           .background-radial-gradient {
             background-color: hsl(180, 3%, 6%);
             background-image: radial-gradient(650px circle at 0% 0%,
-            hsl(70, 41%, 45%) 15%,
-                hsl(78, 41%, 30%) 35%,
-                hsl(69, 41%, 20%) 75%,
-                hsl(69, 40%, 19%) 80%,
+            hsl(172, 41%, 45%) 15%,
+                hsl(188, 41%, 30%) 35%,
+                hsl(186, 41%, 20%) 75%,
+                hsl(185, 40%, 19%) 80%,
                 transparent 100%),
               radial-gradient(1250px circle at 100% 100%,
-                hsl(68, 41%, 45%) 15%,
-                hsl(64, 41%, 30%) 35%,
-                hsl(66, 41%, 20%) 75%,
-                hsl(65, 40%, 19%) 80%,
+                hsl(191, 41%, 45%) 15%,
+                hsl(182, 41%, 30%) 35%,
+                hsl(186, 41%, 20%) 75%,
+                hsl(178, 40%, 19%) 80%,
                 transparent 100%);
           }
       
@@ -57,7 +57,7 @@
             <div class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
               <h1 class="my-5 display-5 fw-bold ls-tight" style="color: hsl(218, 81%, 95%)">
                 Sign up to UTS <br />
-                <span style="color: #fff81f">Create your UTS account! Wonderful things awaits you</span>
+                <span style="color: #fff81f">kick start your driving career</span>
               </h1>
               <p class="mb-4 opacity-70" style="color: hsl(218, 81%, 85%)">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -73,19 +73,18 @@
       
               <div class="card bg-glass">
                 <div class="card-body px-4 py-5 px-md-5">
-                  <form action="{{url_for('user_signup')}}" method="post">
+                  <form>
                     <!-- 2 column grid layout with text inputs for the first and last names -->
-
                     <div class="row">
                       <div class="col-md-6 mb-4">
                         <div class="form-outline">
-                          <input name="firstName" type="text" id="form3Example1" class="form-control" />
+                          <input type="text" id="form3Example1" class="form-control" />
                           <label class="form-label" for="form3Example1">First name</label>
                         </div>
                       </div>
                       <div class="col-md-6 mb-4">
                         <div class="form-outline">
-                          <input name="lastName" type="text" id="form3Example2" class="form-control" />
+                          <input type="text" id="form3Example2" class="form-control" />
                           <label class="form-label" for="form3Example2">Last name</label>
                         </div>
                       </div>
@@ -93,15 +92,13 @@
       
                     <!-- Email input -->
                     <div class="form-outline mb-4">
-                      <input name="email" type="email" id="form3Example3" class="form-control" />
+                      <input type="email" id="form3Example3" class="form-control" />
                       <label class="form-label" for="form3Example3">Email address</label>
                     </div>
       
                     <!-- Password input -->
                     <div class="form-outline mb-4">
-                      <button type="button" id="toggleButton" onclick="togglePassword()">👁️</button>
-                      <input name="password" type="password" id="form3Example4" class="form-control" autocomplete="off"/>
-
+                      <input type="password" id="form3Example4" class="form-control" />
                       <label class="form-label" for="form3Example4">Password</label>
                     </div>
       
@@ -117,7 +114,6 @@
                     <button type="submit" class="btn btn-primary btn-block mb-4">
                       Sign up
                     </button>
-                      </form>
       
                     <!-- Register buttons -->
                     <div class="text-center">
@@ -141,7 +137,7 @@
                       </button>
     
                     </div>
-
+                  </form>
                 </div>
               </div>
             </div>
@@ -149,22 +145,7 @@
         </div>
       </section>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
-
-</script>
-<script>
-    function togglePassword() {
-        var passwordField = document.getElementById("form3Example4");
-        var toggleButton = document.getElementById("toggleButton");
-
-        if (passwordField.type === "password") {
-            passwordField.type = "text";
-            toggleButton.textContent = "👁️";
-        } else {
-            passwordField.type = "password";
-            toggleButton.textContent = "👁️";
-        }
-    }
-</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </html>
 
+  <!-- Section: Design Block -->

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/book_cab.css">
+  <!--=============== REMIXICONS ===============-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+  <title>Your Website</title>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li class="logo"><a href="/">UTS</a></li>
+    
+    <li><a href="#">Home</a></li>
+    <li><a href="/account">Account</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">Activity</a></li>
+  </ul>
+</nav>
+<div class="container">
+    <h1 style="color: white;">Where to?</h1>
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search">
+        <button id="voiceBtn"><i class="ri-mic-line"></i></button>
+    </div>
+    <div id="status"></div>
+    <div id="searchResults"></div>
+</div>
+<div class="map-container">
+    <img class="map" src="images/madhya-pradesh-map.jpg" alt="">
+</div>
+
+<!-- Your website content goes here -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      getLocation();
+    });
+    
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+      } else {
+        alert("Geolocation is not supported by this browser.");
+      }
+    }
+    
+    function showPosition(position) {
+      alert("Latitude: " + position.coords.latitude + 
+      "\nLongitude: " + position.coords.longitude);
+    }
+    
+    function showError(error) {
+      switch(error.code) {
+        case error.PERMISSION_DENIED:
+          alert("User denied the request for Geolocation.");
+          break;
+        case error.POSITION_UNAVAILABLE:
+          alert("Location information is unavailable.");
+          break;
+        case error.TIMEOUT:
+          alert("The request to get user location timed out.");
+          break;
+        case error.UNKNOWN_ERROR:
+          alert("An unknown error occurred.");
+          break;
+      }
+    }
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>

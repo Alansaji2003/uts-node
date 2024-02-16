@@ -17,19 +17,25 @@ app.get("/signup_user", (req,res)=>{
     res.render("user_signup.ejs")
 })
 app.get("/login_user", (req,res)=>{
-    res.render("user_signup.ejs")
+    res.render("user_login.ejs")
 })
 app.get("/signup_driver", (req,res)=>{
-    res.render("user_signup.ejs")
+    res.render("driver_signup.ejs")
 })
 app.get("/login_driver", (req,res)=>{
-    res.render("user_signup.ejs")
+    res.render("driver_login.ejs")
 })
-app.get("/signup_vol", (req,res)=>{
-    res.render("user_signup.ejs")
+app.get("/signup_volunteer", (req,res)=>{
+    res.render("vol_signup.ejs")
 })
 app.get("/login_vol", (req,res)=>{
-    res.render("user_signup.ejs")
+    res.render("vol_login.ejs")
+})
+app.get("/book_cab", (req,res)=>{
+    res.render("book_cab.ejs")
+})
+app.get("/account", (req,res)=>{
+    res.render("acc.ejs")
 })
 
 
