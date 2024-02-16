@@ -2,7 +2,7 @@ const searchInput = document.getElementById('searchInput');
 const voiceBtn = document.getElementById('voiceBtn');
 const searchResults = document.getElementById('searchResults');
 const statusResult = document.getElementById('status');
-
+import { myToken } from './config.js';  // mapbox token from config file, get your own from mapbox website
 voiceBtn.addEventListener('click', function() {
     recognizeSpeech();
 });
@@ -35,47 +35,39 @@ function recognizeSpeech() {
 
 function search() {
     const query = searchInput.value.trim();
-    // Here you can implement your search logic
-    // For demonstration, just showing the search query in the results div
+    //  implement your search logic
+    
     searchResults.style.display = 'block';
     searchResults.innerHTML = `<p>Search query: ${query}</p>`;
 }
 //get location
-var map = L.map('map').setView([21.005, 75.08], 13);
+mapboxgl.accessToken = myToken;
 
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors'
-  }).addTo(map);
+  const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [-74.006, 40.7128],
+    zoom: 12,
+  });
 
-  // Add a marker for the destination
-  var destinationMarker = L.marker([23.205, 77.08]).addTo(map);
-  destinationMarker.bindPopup("Destination").openPopup();
+  const directions = new MapboxDirections({
+    accessToken: mapboxgl.accessToken,
+    unit: 'metric',
+    profile: 'mapbox/driving',
+    alternatives: true,
+    instructions: 'html',
+    language: 'en',
+    placeholderOrigin: 'Enter start location',
+    placeholderDestination: 'Enter end location',
+    geocoder: {
+      placeholder: 'Enter start or end location',
+    },
+  });
 
-  // Initialize the routing control (without waypoints)
-  var routingControl = L.Routing.control({
-    routeWhileDragging: false
-  }).addTo(map);
+  map.addControl(directions, 'top-left');
 
-  // Use Geolocation API to get user's current location
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      var userLocation = [position.coords.latitude, position.coords.longitude];
-
-      // Set user's current location as the map center
-      map.setView(userLocation, 13);
-
-      // Add a marker for user's current location
-      var userMarker = L.marker(userLocation).addTo(map);
-      userMarker.bindPopup("Your Location").openPopup();
-
-      // Update the routing control with the new start point
-      routingControl.setWaypoints([
-        userLocation,          // Start point (user's current location)
-        L.latLng(23.205, 77.08) // Destination point
-      ]);
-    }, function() {
-      console.error("Error getting user's location.");
-    });
-  } else {
-    console.error("Geolocation is not supported by your browser.");
-  }
+  // Handle "Start Navigation" button click
+  document.getElementById('startNavigation').addEventListener('click', () => {
+    // Start navigation logic goes here
+    
+  });

@@ -70,7 +70,7 @@ input[type="text"] {
     font-size: 16px;
 }
 
-button {
+.voicebtn {
     position: absolute;
     top: 0;
     right: 0;
