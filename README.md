@@ -1,1 +1,33 @@
 # uts-node
+
+UTS in Node backend
+# About the website
+
+A taxi service startup for the disabled and elderly people, with volunteers guiding you the entire journey. Made as part of EPICS project at VIT Bhopal University
+
+## Prerequisites
+
+Make sure you have the following installed on your machine:
+
+- [Node.js](https://nodejs.org/)
+- [npm (Node Package Manager)](https://www.npmjs.com/)
+
+## Getting Started
+
+1. **Clone the Repository:**
+
+   ```bash
+   cd your-project
+   git clone https://github.com/Alansaji2003/uts-node.git
+   
+
+2. **Install Dependencies:** 
+    ```bash
+    npm install
+
+3. **Run the Project:**
+
+    ```bash
+    node server.js
+
+Your application should now be running. Open your web browser and visit http://localhost:3000 (or the specified URL if different).
