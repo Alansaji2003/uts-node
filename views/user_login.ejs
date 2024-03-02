@@ -123,7 +123,7 @@
   margin-right: 7px;
   width: auto;
 }
-.box-form .right .active{
+.box-form .right button{
   
   color: #fff;
   font-size: 16px;
@@ -134,6 +134,7 @@
   outline: 0;
   box-shadow: 0px 4px 20px 0px #49c628a6;
   background-image: linear-gradient(135deg, #70F570 10%, #49C628 100%);
+  cursor: pointer;
 }
 
 label {
@@ -181,68 +182,55 @@ label input[type="checkbox"] {
 </head>
 <body>
 
-<div class="box-form">
-	<div class="left">
-		<div class="overlay">
-		<h1 style="color: pink ;text-shadow: #49C628;">U.T.S </h1>
-      
-		<p>"Welcome! Enjoy hassle-free access to our cab services <br>
-            tailored for seniors. Please enter your credentials to login<br> and 
-            embark on comfortable rides with specialized assistance." </p>
-		<span>
-			<p>login with social media</p>
-			<a style="text-decoration: none;" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-      </svg>  Login with facebook</a>
-			<a style="text-decoration: none;" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
-        <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
-      </svg> Login with Twitter</a>
-		</span>
-        <img  src="images/taxi-cab.gif" alt="" width="40%">
-        <hr style="border-color: #333333;">
-		</div>
-	</div>
-	
-	
-		<div class="right">
-		<h5>Login</h5>
-		<p>Don't have an account? <a href="/signup_user">Create Your Account</a> in just few minutes</p>
-			<form method="POST" action="" novalidate>
-				
-        
-				<div class="inputs">
-			<input type="text" name="" id="" placeholder="email">
-      <input type="password" name="" id="" placeholder="UTS password">
-					
-				
-			    
-			<br>
-			
-			   
-			       
-
-		</div>
-
-			<br><br>
-
-		<div class="remember-me--forget-password">
-
-	<label>
-		<input type="checkbox" name="item" >
-		<span class="text-checkbox">Remember me</span>
+  <div class="box-form">
+    <div class="left">
+      <div class="overlay">
+      <h1><center>U.T.S </center></h1>
+      <br>
+      <br>
+      <span>
+        <p>login with social media</p>
+        <a style="text-decoration: none;" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+          <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+        </svg>  Login with facebook</a>
+        <a style="text-decoration: none;" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+          <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+        </svg> Login with Twitter</a>
+      </span>
+          <img src="images/sun.gif" alt="" width="40%">
+      </div>
+    </div>
     
-	</label>
-			<p>forget password?</p>
-		</div>
-
-			<br>
-			
-			</form>
-
-	</div>
-
-</div>
-
+    
+      <div class="right">
+      <h5>Login</h5>
+      <p>Don't have an account? <a href="#">Create Your Account</a> in just few minutes</p>
+      <form action="/login_user" method="post">
+        <div class="inputs">
+          <input name="phoneNo" type="text" placeholder="Phone Number (+91)">
+          <br>
+          <input name="password" type="password" placeholder="Password">
+        </div>
+      
+     
+        
+        <br><br>
+        
+      <div class="remember-me--forget-password">
+          
+    <label>
+      <input type="checkbox" name="item" >
+      <span class="text-checkbox">Remember me</span>
+    </label>
+        <p>forget password?</p>
+      </div>
+        
+        <br>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    
+  </div>
   
 </body>
 </html>

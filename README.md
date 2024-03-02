@@ -24,8 +24,12 @@ Make sure you have the following installed on your machine:
 2. **Install Dependencies:** 
     ```bash
     npm install
+3. **Add config.js inside 'public/js/' and write the following** 
+    ```bash
+    const myToken = 'yourTokenFromMapBox';
+    export { myToken };
 
-3. **Run the Project:**
+4. **Run the Project:**
 
     ```bash
     node server.js
