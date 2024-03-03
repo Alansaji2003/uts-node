@@ -92,6 +92,7 @@ app.post("/signup_user", (req,res)=>{
   const pass = req.body.password;
   const fname = req.body.firstName;
   const lname = req.body.lastName;
+  const email = "dummy@uts.com"
 
   const createUser = async () => {
     try {
@@ -103,7 +104,8 @@ app.post("/signup_user", (req,res)=>{
               firstName:fname,
               lastName:lname,
               phone: phone,
-              password: hash
+              password: hash,
+              email : email
           });
           await newUser.save();
           console.log('User created:', newUser);
