@@ -10,7 +10,7 @@ A taxi service startup for the disabled and elderly people, with volunteers guid
 Make sure you have the following installed on your machine:
 
 - [Node.js](https://nodejs.org/)
-- [npm (Node Package Manager)](https://www.npmjs.com/)
+- [Local MongoDB instance](https://www.mongodb.com/try/download/community)
 
 ## Getting Started
 
@@ -35,9 +35,12 @@ Make sure you have the following installed on your machine:
     GOOGLE_CLIENT_ID="yourGoogleClientID"
     GOOGLE_CLIENT_SECRET="YOURGOOGLECLIENTSECRET"
     SESSION_SECRET="ANYTEXT"
-5. **Run the Project:**
+5. **Check if your mongodb instance url is correct:**
+    ***inside public/js/db.js ***
+    ```bash
+    const dbURI = `mongodb://localhost:27017/${dbName}`;
+6. **Run the Project:**
 
     ```bash
     node server.js
-
 Your application should now be running. Open your web browser and visit http://localhost:3000 (or the specified URL if different).
