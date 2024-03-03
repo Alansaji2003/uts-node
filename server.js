@@ -78,6 +78,14 @@ app.get("/auth/google/secrets", passport.authenticate("google", {
   failureRedirect: "/login_user"
 }))
 
+app.get("/logout", (req,res)=>{
+  req.logout((err)=>{
+    if (err) console.log(err)
+    res.redirect("/")
+  })
+})
+
+
 //post routes
 app.post("/signup_user", (req,res)=>{
   const phone = req.body.phoneNo;
@@ -208,3 +216,12 @@ passport.deserializeUser((user, cb)=>{
 app.listen(port, ()=>{
     console.log(`Server running on port ${port}`);
 })
+
+
+// @aditya-s-nair
+
+
+// @MansaaNarang
+
+
+// @Mehak13A
