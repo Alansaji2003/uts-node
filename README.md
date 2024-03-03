@@ -29,7 +29,13 @@ Make sure you have the following installed on your machine:
     const myToken = 'yourTokenFromMapBox';
     export { myToken };
 
-4. **Run the Project:**
+4. **Make a .env  file put these information**
+
+    ```bash
+    GOOGLE_CLIENT_ID="yourGoogleClientID"
+    GOOGLE_CLIENT_SECRET="YOURGOOGLECLIENTSECRET"
+    SESSION_SECRET="ANYTEXT"
+5. **Run the Project:**
 
     ```bash
     node server.js
